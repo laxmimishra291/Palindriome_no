@@ -1,16 +1,23 @@
-// PalindromeChecker.java
-
-class PalindromeChecker {
+class UseCase2PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        // Welcome Message
-        System.out.println("====================================");
-        System.out.println("      PALINDROME CHECKER APP");
-        System.out.println("           Version 1.0");
-        System.out.println("====================================");
-        System.out.println("This application checks whether a given string is a palindrome.");
-        System.out.println("Application started successfully!");
+        // Hardcoded string
+        String word = "madam";
+
+        // Reverse the string
+        String reversed = "";
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+
+        // Check palindrome using if-else
+        if (word.equals(reversed)) {
+            System.out.println(word + " is a Palindrome.");
+        } else {
+            System.out.println(word + " is NOT a Palindrome.");
+        }
 
     }
 }
